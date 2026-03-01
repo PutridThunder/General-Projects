@@ -20,7 +20,8 @@ FirstName LastName Assignments
 John Doe 67 100 80 96 84
 
 Jane Doe 71 40 30 24 13
-...
+
+(continue list of student names and grades)
 
 ````
 
