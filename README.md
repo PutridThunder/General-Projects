@@ -1,2 +1,2 @@
-#General Projects
-###
+###General Projects
+# Small projects with simple objectives
