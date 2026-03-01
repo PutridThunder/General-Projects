@@ -15,7 +15,8 @@ The CSV file (`Crowdmark.csv`) must follow this structure:
 
 ```
 
-FirstName LastName Assignment1 Assignment2 Assignment3 Assignment4 Assignment5
+FirstName LastName Assignments
+
 John Doe 67 100 80 96 84
 Jane Doe 71 40 30 24 13
 
@@ -55,7 +56,9 @@ Currently, the program plots grades for the first student only.
 
 1. Install dependencies:
    ```bash
-   pip install pandas numpy matplotlib
+   pip install pandas
+   pip install numpy
+   pip install matplotlib
 ````
 
 2. Place `Crowdmark.csv` in the same directory as the Python script.
@@ -63,7 +66,7 @@ Currently, the program plots grades for the first student only.
 3. Run the script:
 
    ```bash
-   python main.py
+   python Crowdmark.py
    ```
 
 ---
