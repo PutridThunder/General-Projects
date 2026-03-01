@@ -36,9 +36,9 @@ Jane Doe 71 40 30 24 13
    - A list of grades  
 3. Stores the data in a dictionary and converts it into a Pandas DataFrame  
 4. Extracts grade data from the DataFrame  
-5. Uses Matplotlib to plot assignment grades for a student  
+5. Uses Matplotlib to plot assignment grades for all students 
 
-Currently, the program plots grades for the first student only.
+Previously, the program plots grades for the first student only, it now dispays for all students with a legend
 
 ---
 
@@ -72,9 +72,9 @@ Currently, the program plots grades for the first student only.
 
 ## Planned Features
 
-* Plot multiple students on the same graph
-* Add student names as labels and legends
 * Improve CSV parsing using Pandas directly
+* move student rows based on average of all their scores
+* move write updated dataframe into a new csv file
 * Add class statistics (average, median, etc.)
 * Improve code structure and readability
 
