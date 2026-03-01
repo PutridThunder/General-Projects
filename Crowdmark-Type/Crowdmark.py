@@ -16,9 +16,11 @@ Dict = {"FirstNames":[x[0] for x in ClassInfo], "LastNames":[x[1] for x in Class
 Dataframe = pd.DataFrame(Dict)
 Grades = Dataframe.get("Grades")
 
-y = [int(g) for g in Grades[0]]
-x = np.array([x+1 for x in range(len(Grades[0]))])
+for i in range(len(Grades)):
+    x = np.array([x+1 for x in range(len(Grades[i]))])
+    y = [int(g) for g in Grades[i]]
 
-plt.plot(x, y, marker ="o")
-plt.ylim(0,100)
+    plt.plot(x, y, marker = "o", label=f"{Dataframe.get("FirstNames")[i]}")
+
+plt.legend(loc="upper left")
 plt.show()
