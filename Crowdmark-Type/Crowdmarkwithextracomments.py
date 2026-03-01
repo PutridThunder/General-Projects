@@ -50,17 +50,33 @@ found through random testing and looking through possibilities,
 """
 Grades = Dataframe.get("Grades")
 
-y = [int(g) for g in Grades[0]]
+# y = [int(g) for g in Grades[0]]
 
-x = np.array([x+1 for x in range(len(Grades[0]))])
+# x = np.array([x+1 for x in range(len(Grades[0]))])
 
-plt.plot(x, y, marker ="o")
+# plt.plot(x, y, marker ="o")
 
 plt.ylim(0,100)
 
-plt.show()
+# plt.show()
 
 # Access multiple grade arrays from the pandas dataframe and chart them all side by side
+for i in range(len(Grades)):
+    x = np.array([x+1 for x in range(len(Grades[i]))])
+    y = [int(g) for g in Grades[i]]
 
+    plt.plot(x, y, marker = "o", label=f"{Dataframe.get("FirstNames")[i]}")
+
+# plt.show()
+
+# add the names of each student to a line
+
+'''Second use of AI, wanted to add the names of the students
+after successfully printing all the charts onto one graph,
+found out to do so all I had to do was add label= into the plotting
+and add .legend() with a location '''
+plt.legend(loc="upper left")
+
+plt.show()
 
 # add the names of each student to a line
