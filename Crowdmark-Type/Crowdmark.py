@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 # Take the titles from the first line
 
-with open("Crowdmark.csv", "r") as f:
+with open("StudentInfo.csv", "r") as f:
 
     Titles = f.readline().strip("\n").split(" ")
 
