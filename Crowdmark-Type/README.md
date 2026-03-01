@@ -1,4 +1,4 @@
-```markdown
+
 # Crowdmark CSV Data Visualizer (Work in Progress)
 
 This project reads student grade data from a CSV file and visualizes assignment scores using Python, Pandas, NumPy, and Matplotlib.
@@ -13,8 +13,6 @@ Status: This project is still in progress and under active development.
 
 The CSV file (`Crowdmark.csv`) must follow this structure:
 
-```
-
 FirstName LastName Assignments
 
 John Doe 67 100 80 96 84
@@ -22,8 +20,6 @@ John Doe 67 100 80 96 84
 Jane Doe 71 40 30 24 13
 
 (continue list of student names and grades)
-
-````
 
 - The first row contains column titles  
 - Each following row represents one student  
@@ -58,11 +54,11 @@ Currently, the program plots grades for the first student only.
 ## How to Run
 
 1. Install dependencies:
-   ```bash
+   ```
    pip install pandas
    pip install numpy
    pip install matplotlib
-````
+``
 
 2. Place `Crowdmark.csv` in the same directory as the Python script.
 
