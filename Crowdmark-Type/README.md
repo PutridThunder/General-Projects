@@ -1,5 +1,3 @@
-Here is a **clean README.md** you can copy and paste directly into your project:
-
 ```markdown
 # Crowdmark CSV Data Visualizer (Work in Progress)
 
