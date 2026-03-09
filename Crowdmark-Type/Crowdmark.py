@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-with open("StudentInfo.csv", "r") as f:
+with open("Crowdmark.csv", "r") as f:
 
     Titles = f.readline().strip("\n").split(" ")
 
