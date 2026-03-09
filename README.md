@@ -10,7 +10,7 @@ The purpose of this repository is to reinforce fundamentals, explore ideas freel
 ## Project Types
 
 ### 1. Objective-Based Projects
-Small programs designed to practice specific skills such as:
+Small programs designed to learn and practice specific skills such as:
 - File handling (CSV, text files)
 - Data visualization
 - Math and matrix operations
