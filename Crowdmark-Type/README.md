@@ -73,10 +73,11 @@ Previously, the program plots grades for the first student only, it now dispays 
 ## Planned Features
 
 * Improve CSV parsing using Pandas directly
-* move student rows based on average of all their scores
+* reorganise student rows based on average of all their scores
 * move write updated dataframe into a new csv file
 * Add class statistics (average, median, etc.)
 * Improve code structure and readability
+* add a terminal searchbar for single student information for easier graph readability
 
 ---
 
@@ -89,4 +90,4 @@ This project was created as a learning exercise to practice:
 * Data visualization with Matplotlib
 * Processing real-world style datasets
 
-The project is still under development and will continue to expand in functionality.
+The project is still under development and will continue to expand in functionality and features.
