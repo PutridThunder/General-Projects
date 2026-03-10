@@ -20,7 +20,7 @@ for i in range(len(Grades)):
     x = np.array([x+1 for x in range(len(Grades[i]))])
     y = [int(g) for g in Grades[i]]
 
-    plt.plot(x, y, marker = "o", label=f"{Dataframe.get("FirstNames")[i]}")
+    plt.plot(x, y, marker = "o", label=f"{Dataframe.get('FirstNames')[i]}")
 
 plt.legend(loc="upper left")
 plt.show()
