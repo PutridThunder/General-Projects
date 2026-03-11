@@ -18,6 +18,5 @@ GradesMatrix = np.array([x + [np.nan] * (NumOfAssignments - len(x)) for x in Dic
 
 plt.ylim(0,100)
 for studentgrades in GradesMatrix:
-    plt.plot(
-        [x+1 for x in range(NumOfAssignments)], studentgrades, marker= 'o', color = "grey", alpha = 0.2)
+    plt.plot([x+1 for x in range(NumOfAssignments)], studentgrades, marker= 'o', color = "grey", alpha = 0.2)
 plt.show()
