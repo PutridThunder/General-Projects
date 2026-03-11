@@ -5,7 +5,9 @@ This project reads student grade data from a CSV file and visualizes assignment 
 
 The program loads student names and grades from a CSV file, stores them in a Pandas DataFrame, and generates a line graph of assignment results.
 
-Status: This project is still in progress and under active development.
+---
+
+## Status: This project is still in progress and under active development.
 
 Current objective is to implement a terminal searchbar a more visible student list to search up single student statistics
 
