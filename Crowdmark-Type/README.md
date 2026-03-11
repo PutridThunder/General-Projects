@@ -7,6 +7,7 @@ The program loads student names and grades from a CSV file, stores them in a Pan
 
 Status: This project is still in progress and under active development.
 
+Current objective is to implement a terminal searchbar a more visible student list to search up single student statistics
 ---
 
 ## CSV File Format
@@ -72,12 +73,10 @@ Previously, the program plots grades for the first student only, it now dispays 
 
 ## Planned Features
 
-* Improve CSV parsing using Pandas directly
 * reorganise student rows based on average of all their scores
 * move write updated dataframe into a new csv file
 * Add class statistics (average, median, etc.)
-* Improve code structure and readability
-* add a terminal searchbar for single student information for easier graph readability
+* add a terminal searchbar for single student information & graph readability
 
 ---
 
