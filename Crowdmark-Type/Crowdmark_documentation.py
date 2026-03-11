@@ -197,5 +197,16 @@ say I want Jane's info, the opacity for everyone else is lower, we only see jane
 
 
 #Useful Stats V.2##############################################################################################
+'''Watched "Learn NumPy in 1 hour!" by Bro Code on YouTube.
 
-'''Yet to implement'''
+Same point stated in Grades V.2
+'''
+
+StudentAverages = np.nanmean(GradesMatrix, axis=1) # each student's average
+
+AveragePerAssignment =np.nanmean(GradesMatrix, axis=0) # class average on any assignment
+
+ClassAverage = np.nanmean(GradesMatrix) # total class's average
+
+TopStudent = np.argmax(StudentAverages) # find student index by highest average
+###############################################################################################
