@@ -210,3 +210,19 @@ ClassAverage = np.nanmean(GradesMatrix) # total class's average
 
 TopStudent = np.argmax(StudentAverages) # find student index by highest average
 ###############################################################################################
+
+#Chart Design Stats V.1###############################################################################
+
+'''
+Had no clean way to display the info,
+first step into that is to make the graph easier to read
+now I implemented a design for the chart
+'''
+
+plt.title("Student Grades Chart", family = "arial", fontsize = 20)
+plt.ylabel("Precentage")
+plt.xlabel("Assignment")
+plt.ylim(0,100)
+plt.yticks([x * 5 for x in range(21)])
+plt.grid()
+plt.show()
