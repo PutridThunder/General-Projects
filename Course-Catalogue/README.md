@@ -1,85 +1,106 @@
+```md
+# Course Grade Tracker (Work in Progress)
 
-# Crowdmark CSV Data Visualizer (Work in Progress)
+This project is a C++ program that allows students to track their courses, define grading breakdowns (syllabus), and calculate their current grades and overall GPA.
 
-This project reads student grade data from a CSV file and visualizes assignment scores using Python, Pandas, NumPy, and Matplotlib.
-
-The program loads student names and grades from a CSV file, stores them in a Pandas DataFrame, and generates a line graph of assignment results.
+The program is built using manual memory management and custom dynamic arrays to store courses and related data.
 
 ---
 
 ## Status: This project is still in progress and under active development.
 
-The current objective is to implement a terminal searchbar a more visible student list to search up single student statistics
-
----
-
-## CSV File Format
-
-The CSV file (`Crowdmark.csv`) must follow this structure:
-
-FirstName LastName Assignments
-
-John Doe 67 100 80 96 84
-
-Jane Doe 71 40 30 24 13
-
-(continue list of student names and grades)
-
-- The first row contains column titles  
-- Each following row represents one student  
-- Grades must be integers  
+The current objective is to fully implement course management, including adding and removing courses, and expanding the system to handle syllabus structures and assignment tracking.
 
 ---
 
 ## How the Program Works
 
-1. Reads the first line of the CSV file to extract column titles  
-2. Reads each student’s data and separates:
-   - First name  
-   - Last name  
-   - A list of grades  
-3. Stores the data in a dictionary and converts it into a Pandas DataFrame  
-4. Extracts grade data from the DataFrame  
-5. Uses Matplotlib to plot assignment grades for all students 
+1. The user inputs their courses  
+2. Each course is stored in a dynamically resizing array  
+3. The system allows expansion when capacity is reached (custom array resizing)  
+4. Each course will later support:
+   - Custom grading categories (e.g., Homework, Midterms, Exams)  
+   - User-defined weight distribution (must total 100%)  
+5. The program will calculate:
+   - Category averages  
+   - Weighted course grades  
+   - Overall GPA across all courses  
 
-Previously, the program plots grades for the first student only, it now dispays for all students with a legend
+---
+
+## Planned Syllabus Format
+
+Each course will allow the user to define grading weights like:
+
+```
+
+Homework: 25%
+Midterm: 35%
+Final Exam: 40%
+
+```
+
+- The user can create any number of categories  
+- Each category contributes a percentage toward the final grade  
+- The system will validate that total weight equals 100%  
+
+---
+
+## Assignment System (Planned)
+
+For each category:
+- The user can add multiple assignments  
+- Each assignment has an associated grade  
+- The program calculates the average for that category  
+
+Example:
+```
+
+Homework Grades: 80, 90, 85
+
+Average = 85
+Contribution = 85 × 0.25 = 21.25%
+
+````
 
 ---
 
 ## Technologies Used
 
-- Python  
-- Pandas  
-- NumPy  
-- Matplotlib  
+- C++  
+- Manual dynamic memory (`new[]`, `delete[]`)  
+- Custom array resizing (no `std::vector`)  
+- Deep copying using:
+  - Copy constructor  
+  - Assignment operator  
+  - Destructor  
 
 ---
 
 ## How to Run
 
-1. Install dependencies:
-   ```
-   pip install pandas
-   pip install numpy
-   pip install matplotlib
-``
+1. Compile the program:
+   ```bash
+   g++ main.cpp -o tracker
+````
 
-2. Place `Crowdmark.csv` in the same directory as the Python script.
-
-3. Run the script:
+2. Run the executable:
 
    ```bash
-   python Crowdmark.py
+   ./tracker
    ```
 
 ---
 
 ## Planned Features
 
-* reorganise student rows based on average of all their scores
-* move write updated dataframe into a new csv file
-* Add class statistics (average, median, etc.)
-* add a terminal searchbar for single student information & graph readability
+* Remove courses from the list
+* Implement syllabus/category system
+* Add assignment storage per category
+* Calculate weighted grades per course
+* Compute overall GPA
+* Display detailed course breakdowns
+* Improve terminal interaction and usability
 
 ---
 
@@ -87,9 +108,12 @@ Previously, the program plots grades for the first student only, it now dispays 
 
 This project was created as a learning exercise to practice:
 
-* File handling in Python
-* Working with Pandas DataFrames
-* Data visualization with Matplotlib
-* Processing real-world style datasets
+* Low-level memory management in C++
+* Understanding object copying (Rule of 3)
+* Building dynamic data structures from scratch
+* Designing systems that handle structured, real-world data
 
-The project is still under development and will continue to expand in functionality and features.
+The project is still under development and will continue to expand in functionality and complexity.
+
+```
+```
