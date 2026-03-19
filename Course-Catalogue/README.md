@@ -114,6 +114,3 @@ This project was created as a learning exercise to practice:
 * Designing systems that handle structured, real-world data
 
 The project is still under development and will continue to expand in functionality and complexity.
-
-```
-```
