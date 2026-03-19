@@ -82,7 +82,7 @@ Contribution = 85 × 0.25 = 21.25%
 1. Compile the program:
    ```bash
    g++ main.cpp -o tracker
-````
+
 
 2. Run the executable:
 
