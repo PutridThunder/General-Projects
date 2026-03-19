@@ -1,6 +1,6 @@
-# Small Python & Joy Projects
+# Personal & Joy Projects
 
-This repository contains a collection of small Python projects created for practice, experimentation, and fun.  
+This repository contains a collection of Python and C++ projects created for learning, practice, experimentation, and fun.  
 Some projects focus on simple objectives (data handling, plotting, math), while others are one-off “joy projects” built purely for creativity and enjoyment.
 
 The purpose of this repository is to reinforce fundamentals, explore ideas freely, and document progress over time.
@@ -10,12 +10,12 @@ The purpose of this repository is to reinforce fundamentals, explore ideas freel
 ## Project Types
 
 ### 1. Objective-Based Projects
-Small programs designed to learn and practice specific skills such as:
+Programs designed to learn and practice specific skills such as:
 - File handling (CSV, text files)
 - Data visualization
 - Math and matrix operations
-- Python logic and structure
-- Library usage (NumPy, Pandas, Matplotlib)
+- Logic and structure
+- Library usage
 
 ---
 
