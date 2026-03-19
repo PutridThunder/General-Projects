@@ -1,4 +1,4 @@
-```md
+
 # Course Grade Tracker (Work in Progress)
 
 This project is a C++ program that allows students to track their courses, define grading breakdowns (syllabus), and calculate their current grades and overall GPA.
