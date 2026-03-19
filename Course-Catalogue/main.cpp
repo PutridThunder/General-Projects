@@ -12,6 +12,7 @@ struct Course{
     Course(){
         this->Name = nullptr;
     }
+
     Course(const Course& other){
         if(other.Name != nullptr){
             Name = new char[strlen(other.Name) + 1]; //takes the name of the other course and set this names length to that
@@ -22,12 +23,22 @@ struct Course{
         }
     }
 
+    void ChangeName(const char* p){
+        delete[] this->Name;
+        Name = new char [strlen(p) + 1];
+        strcpy(this->Name,p);
+    }
+
     Course& operator=(const Course& other) {
         if (this != &other) {
             delete[] Name;
 
-            Name = new char[strlen(other.Name) + 1];
-            strcpy(Name, other.Name);
+            if (other.Name != nullptr){
+                Name = new char[strlen(other.Name) + 1];
+                strcpy(Name, other.Name);
+            } else {
+                Name = nullptr;
+            }
         }
         return *this;
     }
@@ -44,7 +55,7 @@ struct CourseList{
     int length ;
     Course* courses;
 
-    CourseList(const int size){
+    CourseList(int size){
         this->size = size;
         length = 0;
         courses = new Course[size];
@@ -63,28 +74,60 @@ struct CourseList{
         courses = NewCourseList;
     }
 
+    void AddCourse(Course& input){
+        if (length >= size){
+            ExpandLength();
+        }
+        courses[length] = input;
+        length++;
+    }
+
     ~CourseList(){
         delete[] courses;
     }
 };
 
 
-void Add_Course(char*& name){
-    //use this to add courses to course list
-    return;
-}
-
 
 int main(){
 
-    while (true){
+    cout<<"---COURSE-CATALOG---"<<endl;
+    cout<<"Welcome, Please Input The number of courses you have this semester"<<endl;
+    cout<<"COURSE COUNT: ";
+    int CourseCount;
 
+    while(true){
+        cin>>CourseCount;
+        if(cin.fail() || CourseCount <= 0){
+            cout<<"Error: Input was not of type Int OR <= 0" <<endl;
+            cout<<"COURSE COUNT: ";
 
-
+            cin.clear();
+            cin.ignore(1000,'\n');
+        }
+        else{
+            break;
+        }
     }
 
+    CourseList Catalog(CourseCount);
 
+    cout<<"Add the Names of your Courses"<<endl;
 
+    for(int i = 0; i < CourseCount; i++){
+        //CURRENTLY NEEDS FIXING///////////////////////////////////////////////////////////////////
+        char input[100];
+        cout<<"COURSE"<<i+1<<": ";
+        cin.getline(input, 100);
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        Course temporary;
+        Catalog.AddCourse(temporary);
 
+        cout<<endl;
+    }
+    for(int i = 0; i < CourseCount; i++){
+        cout << "COURSE" << i+1 << ": " <<Catalog.courses[i].Name <<endl;
+    }
+    
     return 0;
 }
