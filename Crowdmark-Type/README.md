@@ -1,5 +1,5 @@
 
-# Crowdmark CSV Data Visualizer (Work in Progress)
+# Crowdmark CSV Data Visualizer (Work in Progress/Python Project)
 
 This project reads student grade data from a CSV file and visualizes assignment scores using Python, Pandas, NumPy, and Matplotlib.
 
