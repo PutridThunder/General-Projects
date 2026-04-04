@@ -226,4 +226,48 @@ plt.ylim(0,100)
 plt.yticks([x * 5 for x in range(21)])
 plt.xticks([x+1 for x in range(NumOfAssignments)])
 plt.grid()
+plt.ion() #IMPORTANT, Plots will now update without blocking the script.
 plt.show()
+
+#Searching V.1########################################################################################
+
+'''
+Adding in the first searchbar,
+searching a student by name to
+highlight their graph
+'''
+def GetStudentIndex(name):
+    First, Last = name.split(" ")
+    mask = (Dataframe["FirstNames"] == First) & (Dataframe["LastNames"] == Last) # Using Numpy, we are checking each name for a match, if both cases are true, we found a match, the student exists, faster than for loops, shorter too
+    if mask.any(): # mask.any() basically says "is there at LEAST one true, does one person exist with this full name"
+        index = np.where(mask)[0][0] #mask is now an array [T,F,F,F] we want the only True, np.where returns a tuple: (array([2]),) we want the first element of the tuple: array([2]) and the first index of the array: 2, that's why we have [0][0]
+        return index
+    else:
+        print("Student not found")        
+    
+def AllToGray():
+    for line in StudentLines:
+        l = line[0] #line 2d object
+        l.set_color('grey')
+        l.set_alpha(0.2)
+        l.set_linewidth(1)
+    plt.draw()
+
+def HighlightSelectStudent(index):
+    line = StudentLines[index][0]      # get the Line2D object
+    line.set_color('blue')             # change color
+    line.set_alpha(1)                  # optional: make it fully visible
+    line.set_linewidth(2)              # optional: make it thicker
+    plt.draw()                         # redraw the plot
+
+while True:
+    print("COMMANDS")
+    print("S: SELECT SINGLE STUDENT")
+    print("C: CLEAR")
+    UserInput =input("INPUT: ").upper()
+    if UserInput =="S":
+        x = input("Select a student(first and last name(e.g. Jane Doe)): ")
+        index = GetStudentIndex(x)
+        HighlightSelectStudent(index)
+    elif UserInput =="C":
+        AllToGray()
