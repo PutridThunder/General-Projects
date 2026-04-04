@@ -8,7 +8,7 @@ The program loads student names and grades from a CSV file, stores them in a Pan
 ---
 
 ## Status: This project is still in progress and under active development.
-
+### NOTE: currently Moving documentation into a jupyter notebook for cleaner visuals
 The current objective is to implement a terminal searchbar a more visible student list to search up single student statistics
 
 ---
