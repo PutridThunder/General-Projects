@@ -1,53 +1,83 @@
+# Crowdmark CSV Data Visualizer
 
-# Crowdmark CSV Data Visualizer (Work in Progress/Python Project)
+## Overview
+This Python project reads student grade data from a CSV file and provides interactive visualizations and analysis. The program shows individual student grades, class averages, and assignment breakdowns using dynamic plots.
 
-This project reads student grade data from a CSV file and visualizes assignment scores using Python, Pandas, NumPy, and Matplotlib.
+Key features:  
+- Visualizes all students’ assignment grades with line plots.  
+- Highlights individual students or groups above a grade threshold.  
+- Displays student and class statistics including averages, ranks, and letter grades.  
+- Pie charts show per-student assignment distributions.  
 
-The program loads student names and grades from a CSV file, stores them in a Pandas DataFrame, and generates a line graph of assignment results.
-
----
-
-## Status: This project is still in progress and under active development.
-### NOTE: currently Moving documentation into a jupyter notebook for cleaner visuals
-The current objective is to implement a terminal searchbar a more visible student list to search up single student statistics
+> **Note:** I am currently moving all project documentation into a Jupyter Notebook for cleaner visuals and better step-by-step explanations.
 
 ---
 
 ## CSV File Format
+The CSV file (`Crowdmark.csv`) should follow this structure:
 
-The CSV file (`Crowdmark.csv`) must follow this structure:
+```
+FirstName LastName Assignment1 Assignment2 Assignment3 ...
+John Doe 85 90 78
+Jane Smith 92 88 95
+```
 
-FirstName LastName Assignments
-
-John Doe 67 100 80 96 84
-
-Jane Doe 71 40 30 24 13
-
-(continue list of student names and grades)
-
-- The first row contains column titles  
-- Each following row represents one student  
-- Grades must be integers  
+- The first row can contain column titles.  
+- Each subsequent row represents a student.  
+- Grades must be integers; missing grades can be left blank.  
 
 ---
 
-## How the Program Works
+## Features
+- Calculates per-student averages and ranks.  
+- Computes class average and per-assignment averages.  
+- Highlights top/bottom performers.  
+- Interactive console commands:  
+  - **S**: Select a student to display detailed stats and pie chart.  
+  - **C**: Clear highlighted students.  
+  - **L**: List all students with top and lowest performers.  
+  - **D**: Show class average and best/worst assignments.  
+  - **T**: Highlight students above a specified grade threshold.  
+  - **Q**: Quit program.  
 
-1. Reads the first line of the CSV file to extract column titles  
-2. Reads each student’s data and separates:
-   - First name  
-   - Last name  
-   - A list of grades  
-3. Stores the data in a dictionary and converts it into a Pandas DataFrame  
-4. Extracts grade data from the DataFrame  
-5. Uses Matplotlib to plot assignment grades for all students 
+---
 
-Previously, the program plots grades for the first student only, it now dispays for all students with a legend
+## Skills Showcased
+- **Python Programming:** Loops, functions, dictionaries, and arrays.  
+- **Data Handling:** Using `pandas` and `NumPy` to process datasets and handle missing values.  
+- **Data Visualization:** Dynamic line plots and pie charts with `matplotlib`.  
+- **Interactive CLI:** User-friendly commands for selecting and filtering students.  
+- **Problem Solving:** Organizing data, calculating averages/ranks, handling incomplete datasets.  
+
+---
+
+## Installation & Usage
+1. Install dependencies:
+```bash
+pip install pandas numpy matplotlib
+```
+
+2. Place `Crowdmark.csv` in the same folder as the script.  
+
+3. Run the script:
+```bash
+python StudentGradesVisualization.py
+```
+
+4. Use the command-line interface to navigate and analyze student grades.
+
+---
+
+## Project Status
+✅ The project is complete and fully functional.  
+
+⚠️ Ongoing improvements:  
+- Full documentation is being transferred into a Jupyter Notebook.  
+- Enhancements to student search and visualization clarity are planned.  
 
 ---
 
 ## Technologies Used
-
 - Python  
 - Pandas  
 - NumPy  
@@ -55,41 +85,9 @@ Previously, the program plots grades for the first student only, it now dispays 
 
 ---
 
-## How to Run
-
-1. Install dependencies:
-   ```
-   pip install pandas
-   pip install numpy
-   pip install matplotlib
-``
-
-2. Place `Crowdmark.csv` in the same directory as the Python script.
-
-3. Run the script:
-
-   ```bash
-   python Crowdmark.py
-   ```
-
----
-
-## Planned Features
-
-* reorganise student rows based on average of all their scores
-* move write updated dataframe into a new csv file
-* Add class statistics (average, median, etc.)
-* add a terminal searchbar for single student information & graph readability
-
----
-
 ## Purpose
-
-This project was created as a learning exercise to practice:
-
-* File handling in Python
-* Working with Pandas DataFrames
-* Data visualization with Matplotlib
-* Processing real-world style datasets
-
-The project is still under development and will continue to expand in functionality and features.
+This project demonstrates practical skills in:  
+- File handling and CSV processing in Python.  
+- Organizing and analyzing tabular data with `pandas`.  
+- Data visualization for educational datasets.  
+- Building interactive CLI tools for data exploration.  
