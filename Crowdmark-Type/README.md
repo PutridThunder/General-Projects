@@ -61,7 +61,7 @@ pip install pandas numpy matplotlib
 
 3. Run the script:
 ```bash
-python StudentGradesVisualization.py
+python CrowdmarkMain.py
 ```
 
 4. Use the command-line interface to navigate and analyze student grades.
